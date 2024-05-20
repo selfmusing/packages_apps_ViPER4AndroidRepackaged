@@ -1,7 +1,9 @@
-BUILD_PATH := packages/apps/ViPER4AndroidFX
+VENDOR_PATH := vendor/ViPER4AndroidFXRepackaged
+
+DEVICE_PACKAGE_OVERLAYS += $(VENDOR_PATH)/overlay-viper
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(BUILD_PATH)/vendor,vendor)
+    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/vendor,vendor)
 
 PRODUCT_PACKAGES += \
     ViPER4AndroidFX
